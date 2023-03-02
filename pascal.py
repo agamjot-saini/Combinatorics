@@ -1,5 +1,10 @@
 from math import factorial
 
+# Input: positive integer n > 0 
+
+# Output: print n rows of Pascal's triangle using the Combinations formula
+#         nCk = n!/((n-k)!*k!)
+
 def pascal(n):
 
     print()
@@ -29,5 +34,3 @@ if __name__ == '__main__':
         print()
         print("Please input a positive integer ( > 0 )")
         print()
-    
-    # if type(type_n is int)

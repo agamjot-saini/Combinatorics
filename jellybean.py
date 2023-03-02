@@ -1,6 +1,22 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
+# PROBLEM:
+# 
+# Julia starts with an empty jar. Each day (for 8 total days) Julia either puts
+# one jelly bean in the jar OR takes out one jelly bean and then records the
+# total number of beans in the jar (to get a “jelly bean sequence” with 8
+# entries). At the end of the 8 days she has no beans in the jar.
+# 
+# For example, 1,2,1,2,3,2,1,0 is a jelly bean sequence.
+# List out all possible jelly bean sequences.
+
+# SOLUTION:
+# 
+# We can model this problem as a directed graph. Start with 0 jellybeans and
+# end with 0 jellybeans. Find the total number of paths fom the start node (A)
+# to the end node (O).
+
 G = nx.DiGraph()
 G.add_node("A:0")
 G.add_node("B:1")
@@ -74,4 +90,3 @@ for path in paths:
 print("Number of Paths: ", total_paths)
 
 plt.show()
-
